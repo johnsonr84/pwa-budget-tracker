@@ -23,3 +23,13 @@ request.onsuccess = function(event) {
 request.onerror = function(event) {
 	console.log(event.target.error);
 };
+
+//save to record when the app transaction fails
+function saveRecord(record) {
+	//create a transaction on the objectStore with readwrite access
+	const transaction = db.transaction('pendingTransac', 'readwrite');
+	//access the objectStore
+	const store = transaction.objectStore('pendingTransac');
+	//add record to the store
+	store.add(record);
+}
