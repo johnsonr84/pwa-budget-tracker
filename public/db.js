@@ -44,4 +44,29 @@ function checkIndexdb() {
 	const getAll = store.getAll();
 
 	console.log(getAll);
+
+    //If getAll is successful, then POST the records
+	getAll.onsuccess = function() {
+		if (getAll.result.length > 0) {
+			fetch('/api/transaction/bulk', {
+				method: 'POST',
+				body: JSON.stringify(getAll.result),
+				headers: {
+					Accept: 'application/json, text/plain, */*',
+					'Content-Type': 'application/json'
+				}
+			})
+				.then(response => response.json())
+				.then(() => {
+					//clear indexdb store after successful POST
+					const transaction = db.transaction([ 'pendingTransac' ], 'readwrite');
+
+					// access object store
+					const store = transaction.objectStore('pendingTransac');
+
+					// clear all items in object store
+					store.clear();
+				});
+		}
+	};
 }
