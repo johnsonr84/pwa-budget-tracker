@@ -24,7 +24,7 @@
   #
   
   ## Description 
-  A PWA-Budget-Tracker application that allows for offline access and functionality.
+  A PWA Budget Tracker application that allows for offline access and functionality.
   * The user will be able to add expenses and deposits to their budget with or without a connection.
   * When entering transactions offline, offline-entries will be added to tracker when brought back online.
 
@@ -87,6 +87,7 @@
   * [stackoverflow.com](https://stackoverflow.com/)
   * [YouTube](https://www.youtube.com/)
   * [Google](https://www.google.com)
+  * [IndexDB](https://javascript.info/indexeddb)
   * [18-PWA-Activities/](18-PWA-Activities/)
   * [Deployment Guide](./MongoDBDeploy.md)
   * [Heroku](https://www.heroku.com)
