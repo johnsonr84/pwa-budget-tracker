@@ -52,7 +52,7 @@
       <td>pwa-budget-tracker example</td>
     </tr>
     <tr>
-      <td><img src="" height=400 alt="screenshot of pwa-budget-tracker"></td>
+      <td><img src="public/img/pwa-demo.png" height=400 alt="screenshot of pwa-budget-tracker"></td>
     </tr>
   </table>
 
