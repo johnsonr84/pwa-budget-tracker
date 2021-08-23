@@ -70,3 +70,6 @@ function checkIndexdb() {
 		}
 	};
 }
+
+//listen for app back online
+window.addEventListener('online', checkIndexdb);
