@@ -33,3 +33,15 @@ function saveRecord(record) {
 	//add record to the store
 	store.add(record);
 }
+
+//get record
+function checkIndexdb() {
+	//open a transaction on objectStore
+	const transaction = db.transaction('pendingTransac', 'readwrite');
+	//access the objectStore
+	const store = transaction.objectStore('pendingTransac');
+	//get all records from the store
+	const getAll = store.getAll();
+
+	console.log(getAll);
+}
